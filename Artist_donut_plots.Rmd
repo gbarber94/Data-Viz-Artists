@@ -90,7 +90,7 @@ domain_list <- list(list(x = c(1, 2)),list(x = c(-1, -4)),list(x = c(3,6)),list(
 
 for (i in seq(1,nrow(M_list))){
   x <- filter(p, museum == M_list[i,])
-  k <- x %>% plot_ly(sort = FALSE,hovertext = ~paste("<b>Region:<b>",x$Region,"<br>Percent:",x$Percent,"%"),
+  k <- x %>% plot_ly(sort = FALSE,hovertext = paste("<b>Region:<b>",x$Region,"<br>Percent:",x$Percent,"%"),
                        hoverlabel =list(font = list(size = 12)),
                        labels = ~Region, values = ~Percent, 
                        textinfo = paste(x$Percent), hoverinfo = "text",
@@ -141,9 +141,9 @@ domain_list <- list(list(x = c(1, 2)),list(x = c(-1, -4)),list(x = c(3,6)),list(
 
 for (i in seq(1,nrow(M_list))){
   x <- filter(p, museum == M_list[i,])
-  k <- x %>% plot_ly(sort = FALSE,hovertext = ~paste("<b>Region:<b>",x$Region,"<br>Percent:",x$Percent,"%"),
+  k <- x %>% plot_ly(sort = FALSE,hovertext = paste("<b>Region:<b>",x$Region,"<br>Percent:",x$Percent,"%"),
                        hoverlabel =list(font = list(size = 12)),
-                       labels = ~Region, values = ~Percent, 
+                       labels = x$Region, values = x$Percent, 
                        textinfo = paste(x$Percent), hoverinfo = "text",
                        insidetextfont = list(color = '#FFFFFF'),
                        marker = list(colors=colors3,
@@ -184,7 +184,7 @@ domain_list <- list(list(x = c(1, 2)),list(x = c(-1, -4)),list(x = c(3,6)),list(
 
 for (i in seq(1,nrow(M_list))){
   x <- filter(p, museum == M_list[i,])
-  k <- x %>% plot_ly(sort = FALSE,hovertext = ~paste("<b>Region:<b>",x$Region,"<br>Percent:",x$Percent,"%"),
+  k <- x %>% plot_ly(sort = FALSE,hovertext = paste("<b>Region:<b>",x$Region,"<br>Percent:",x$Percent,"%"),
                        hoverlabel =list(font = list(size = 12)),
                        labels = ~Region, values = ~Percent, 
                        textinfo = paste(x$Percent), hoverinfo = "text",
@@ -228,7 +228,7 @@ domain_list <- list(list(x = c(1, 2)),list(x = c(-1, -4)),list(x = c(3,6)),list(
 
 for (i in seq(1,nrow(M_list))){
   x <- filter(p, museum == M_list[i,])
-  k <- x %>% plot_ly(sort = FALSE,hovertext = ~paste("<b>Region:<b>",x$Region,"<br>Percent:",x$Percent,"%"),
+  k <- x %>% plot_ly(sort = FALSE,hovertext = paste("<b>Region:<b>",x$Region,"<br>Percent:",x$Percent,"%"),
                        hoverlabel =list(font = list(size = 12)),
                        labels = ~Region, values = ~Percent, 
                        textinfo = paste(x$Percent), hoverinfo = "text",
@@ -272,7 +272,7 @@ domain_list <- list(list(x = c(1, 2)),list(x = c(-1, -4)),list(x = c(3,6)),list(
 
 for (i in seq(1,nrow(M_list))){
   x <- filter(p, museum == M_list[i,])
-  k <- x %>% plot_ly(sort = FALSE,hovertext = ~paste("<b>Region:<b>",x$Region,"<br>Percent:",x$Percent,"%"),
+  k <- x %>% plot_ly(sort = FALSE,hovertext = paste("<b>Region:<b>",x$Region,"<br>Percent:",x$Percent,"%"),
                        hoverlabel =list(font = list(size = 12)),
                        labels = ~Region, values = ~Percent, 
                        textinfo = paste(x$Percent), hoverinfo = "text",
