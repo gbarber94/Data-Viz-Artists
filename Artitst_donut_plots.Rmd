@@ -4,8 +4,8 @@ author: "Gregory Barber"
 date: "April 2, 2019"
 output: 
 html_document:
-  self_contained: no
-runtime: shiny
+#  self_contained: no
+#runtime: shiny
 ---
 
 <style type="text/css">
@@ -113,8 +113,16 @@ for (i in seq(1,nrow(M_list))){
                        ) %>%
   add_pie(hole = 0.6) %>%
   layout(title = '') %>%
-  layout(margin = list(t = 80),annotations = list(text = as.character(x$museum),showarrow = FALSE, align = 'right', y = 1.09, font = list(size = 14), yref = "paper"))%>%
-  layout(legend = list(x = 0.4,y = 0.5, align = 'right'))
+  layout(plot_bgcolor='rgb(0, 0,0,0)') %>% 
+  layout(paper_bgcolor='rgb(0, 0,0,0)') %>%
+  layout(margin = list(t = 45, r = 35),annotations = list(text = as.character(x$museum),showarrow = FALSE, align = 'right', y = 1, font = list(size = 14), yref = "paper"))%>%
+  layout(legend = list(x = 0.4,y = 0.5, align = 'right'))%>%
+  config(collaborate = FALSE, 
+    displaylogo = FALSE, modeBarButtonsToRemove = list("resetScale2d", 
+        "sendDataToCloud", "zoom2d", "zoomIn2d", "zoomOut2d", 
+        "pan2d", "select2d", "lasso2d", "hoverClosestCartesian", 
+        "hoverCompareCartesian", "hoverClosestGl2d", "hoverClosestPie", 
+        "toggleHover", "resetViews", "toggleSpikelines"))
   plot_vec <- append(plot_vec, list(k))
 }
 ```
@@ -124,7 +132,7 @@ for (i in seq(1,nrow(M_list))){
 fluidPage(
   column(7,offset = 5,titlePanel("Group 1")),
   fluidRow(
-    column(plot_vec[[1]]%>% layout(legend = list(x = 0.29,y = 0.5, align = 'right', bgcolor = 'rgba(0,0,0,0)', font = list(size = 10)))%>% layout(height = 400), width = 4),
+    column(plot_vec[[1]]%>% layout(legend = list(x = 0.29,y = 0.5, align = 'right', bgcolor = 'rgba(0,0,0,0)', font = list(size = 9)))%>% layout(height = 400), width = 4),
     column(plot_vec[[5]]%>% layout(showlegend = FALSE), width = 4),
     column(plot_vec[[3]]%>% layout(showlegend = FALSE), width = 4),
     column(plot_vec[[4]]%>% layout(showlegend = FALSE), width = 4),
@@ -160,8 +168,16 @@ for (i in seq(1,nrow(M_list))){
                        ) %>%
   add_pie(hole = 0.6) %>%
   layout(title = '') %>%
-  layout(margin = list(t = 80),annotations = list(text = as.character(x$museum),showarrow = FALSE, align = 'right', y = 1.09, font = list(size = 14), yref = "paper"))%>%
-  layout(legend = list(x = 0.4,y = 0.5, align = 'right'))
+  layout(plot_bgcolor='rgb(0, 0,0,0)') %>% 
+  layout(paper_bgcolor='rgb(0, 0,0,0)') %>%
+  layout(margin = list(t = 45, r = 35),annotations = list(text = as.character(x$museum),showarrow = FALSE, align = 'right', y = 1, font = list(size = 14), yref = "paper"))%>%
+  layout(legend = list(x = 0.4,y = 0.5, align = 'right'))%>%
+  config(collaborate = FALSE, 
+    displaylogo = FALSE, modeBarButtonsToRemove = list("resetScale2d", 
+        "sendDataToCloud", "zoom2d", "zoomIn2d", "zoomOut2d", 
+        "pan2d", "select2d", "lasso2d", "hoverClosestCartesian", 
+        "hoverCompareCartesian", "hoverClosestGl2d", "hoverClosestPie", 
+        "toggleHover", "resetViews", "toggleSpikelines"))
   plot_vec <- append(plot_vec, list(k))
 }
 ```
@@ -171,7 +187,7 @@ for (i in seq(1,nrow(M_list))){
 fluidPage(
   column(7,offset = 5,titlePanel("Group 2")),
   fluidRow(
-    column(plot_vec[[1]]%>% layout(legend = list(x = 0.29,y = 0.5, align = 'right', bgcolor = 'rgba(0,0,0,0)', font = list(size = 10)))%>% layout(height = 400), width = 4),
+    column(plot_vec[[1]]%>% layout(legend = list(x = 0.29,y = 0.5, align = 'right', bgcolor = 'rgba(0,0,0,0)', font = list(size = 9)))%>% layout(height = 400), width = 4),
     column(plot_vec[[2]]%>% layout(showlegend = FALSE), width = 4),
     column(plot_vec[[3]]%>% layout(showlegend = FALSE), width = 4),
     column(plot_vec[[4]]%>% layout(showlegend = FALSE), width = 4)
@@ -206,8 +222,16 @@ for (i in seq(1,nrow(M_list))){
                        ) %>%
   add_pie(hole = 0.6) %>%
   layout(title = '') %>%
-  layout(margin = list(t = 80),annotations = list(text = as.character(x$museum),showarrow = FALSE, align = 'right', y = 1.09, font = list(size = 14), yref = "paper"))%>%
-  layout(legend = list(x = 0.4,y = 0.5, align = 'right'))
+  layout(plot_bgcolor='rgb(0, 0,0,0)') %>% 
+  layout(paper_bgcolor='rgb(0, 0,0,0)') %>%
+  layout(margin = list(t = 45, r = 35),annotations = list(text = as.character(x$museum),showarrow = FALSE, align = 'right', y = 1, font = list(size = 14), yref = "paper"))%>%
+  layout(legend = list(x = 0.4,y = 0.5, align = 'right'))%>%
+  config(collaborate = FALSE, 
+    displaylogo = FALSE, modeBarButtonsToRemove = list("resetScale2d", 
+        "sendDataToCloud", "zoom2d", "zoomIn2d", "zoomOut2d", 
+        "pan2d", "select2d", "lasso2d", "hoverClosestCartesian", 
+        "hoverCompareCartesian", "hoverClosestGl2d", "hoverClosestPie", 
+        "toggleHover", "resetViews", "toggleSpikelines"))
   plot_vec <- append(plot_vec, list(k))
 }
 ```
@@ -217,11 +241,11 @@ for (i in seq(1,nrow(M_list))){
 fluidPage(
   column(7,offset = 5,titlePanel("Group 3")),
   fluidRow(
-    column(plot_vec[[1]]%>% layout(legend = list(x = 0.29,y = 0.5, align = 'right', bgcolor = 'rgba(0,0,0,0)', font = list(size = 10)))%>% layout(height = 400), width = 4),
-    column(plot_vec[[2]]%>% layout(showlegend = FALSE), width = 4),
+    column(plot_vec[[1]]%>% layout(legend = list(x = 0.29,y = 0.5, align = 'right', bgcolor = 'rgba(0,0,0,0)', font = list(size = 9)))%>% layout(height = 400), width = 4),
+    column(plot_vec[[5]]%>% layout(showlegend = FALSE), width = 4),
     column(plot_vec[[3]]%>% layout(showlegend = FALSE), width = 4),
     column(plot_vec[[4]]%>% layout(showlegend = FALSE), width = 4),
-    column(plot_vec[[5]]%>% layout(showlegend = FALSE), width = 4)
+    column(plot_vec[[2]]%>% layout(showlegend = FALSE), width = 4)
   )
 )
 ```
@@ -229,7 +253,7 @@ fluidPage(
 ```{r}
 
 p <- art_long %>%
-  filter(Group == 3)%>%
+  filter(Group == 4)%>%
   arrange(factor(Region, levels =  c("Europe",
                                  "North America",
                                  "Asia",
@@ -253,8 +277,16 @@ for (i in seq(1,nrow(M_list))){
                        ) %>%
   add_pie(hole = 0.6) %>%
   layout(title = '') %>%
-  layout(margin = list(t = 80),annotations = list(text = as.character(x$museum),showarrow = FALSE, align = 'right', y = 1.09, font = list(size = 14), yref = "paper"))%>%
-  layout(legend = list(x = 0.4,y = 0.5, align = 'right'))
+  layout(plot_bgcolor='rgb(0, 0,0,0)') %>% 
+  layout(paper_bgcolor='rgb(0, 0,0,0)') %>%
+  layout(margin = list(t = 45, r = 35),annotations = list(text = as.character(x$museum),showarrow = FALSE, align = 'right', y = 1, font = list(size = 14), yref = "paper"))%>%
+  layout(legend = list(x = 0.4,y = 0.5, align = 'right'))%>%
+  config(collaborate = FALSE, 
+    displaylogo = FALSE, modeBarButtonsToRemove = list("resetScale2d", 
+        "sendDataToCloud", "zoom2d", "zoomIn2d", "zoomOut2d", 
+        "pan2d", "select2d", "lasso2d", "hoverClosestCartesian", 
+        "hoverCompareCartesian", "hoverClosestGl2d", "hoverClosestPie", 
+        "toggleHover", "resetViews", "toggleSpikelines"))
   plot_vec <- append(plot_vec, list(k))
 }
 ```
@@ -264,9 +296,9 @@ for (i in seq(1,nrow(M_list))){
 fluidPage(
   column(7,offset = 5,titlePanel("Group 4")),
   fluidRow(
-    column(plot_vec[[1]]%>% layout(legend = list(x = 0.29,y = 0.5, align = 'right', bgcolor = 'rgba(0,0,0,0)', font = list(size = 10)))%>% layout(height = 400), width = 4),
-    column(plot_vec[[2]]%>% layout(showlegend = FALSE), width = 4),
-    column(plot_vec[[3]]%>% layout(showlegend = FALSE), width = 4)
+    column(plot_vec[[1]]%>% layout(legend = list(x = 0.29,y = 0.5, align = 'right', bgcolor = 'rgba(0,0,0,0)', font = list(size = 9)))%>% layout(height = 400), width = 4),
+    column(plot_vec[[3]]%>% layout(showlegend = FALSE), width = 4),
+    column(plot_vec[[2]]%>% layout(showlegend = FALSE), width = 4)
   )
 )
 ```
@@ -298,8 +330,16 @@ for (i in seq(1,nrow(M_list))){
                        ) %>%
   add_pie(hole = 0.6) %>%
   layout(title = '') %>%
-  layout(margin = list(t = 80),annotations = list(text = as.character(x$museum),showarrow = FALSE, align = 'right', y = 1.09, font = list(size = 14), yref = "paper"))%>%
-  layout(legend = list(x = 0.4,y = 0.5, align = 'right'))
+  layout(plot_bgcolor='rgb(0, 0,0,0)') %>% 
+  layout(paper_bgcolor='rgb(0, 0,0,0)') %>%
+  layout(margin = list(t = 45, r = 35),annotations = list(text = as.character(x$museum),showarrow = FALSE, align = 'right', y = 1, font = list(size = 14), yref = "paper"))%>%
+  layout(legend = list(x = 0.4,y = 0.5, align = 'right'))%>%
+  config(collaborate = FALSE, 
+    displaylogo = FALSE, modeBarButtonsToRemove = list("resetScale2d", 
+        "sendDataToCloud", "zoom2d", "zoomIn2d", "zoomOut2d", 
+        "pan2d", "select2d", "lasso2d", "hoverClosestCartesian", 
+        "hoverCompareCartesian", "hoverClosestGl2d", "hoverClosestPie", 
+        "toggleHover", "resetViews", "toggleSpikelines"))
   plot_vec <- append(plot_vec, list(k))
 }
 ```
@@ -309,7 +349,7 @@ for (i in seq(1,nrow(M_list))){
 fluidPage(
   column(7,offset = 5,titlePanel("Group 5")),
   fluidRow(
-    column(plot_vec[[1]]%>% layout(legend = list(x = 0.29,y = 0.5, align = 'right', bgcolor = 'rgba(0,0,0,0)', font = list(size = 10)))%>% layout(height = 400), width = 4)
+    column(plot_vec[[1]]%>% layout(legend = list(x = 0.29,y = 0.5, align = 'right', bgcolor = 'rgba(0,0,0,0)', font = list(size = 9)))%>% layout(height = 400), width = 4)
   )
 )
 ```
